@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0267c1aa62.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron header sticky-top">
+        <div class="text-center" id="title"><i class="far fa-newspaper"></i> New York Times Search</div>
+    </div>
+    <div class="container main">
+        <div class="card search">
+            <div class="card-header">Search Parameters</div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputSearch">Search Term:</label>
+                        <input type="text" class="form-control" id="inputSearch">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputRecords">Number of Records to Retrieve</label>
+                        <input type="number" class="form-control" id="inputRecords">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputStartYear">Start Year (Optional)</label>
+                        <input type="number" class="form-control" id="inputStartYear">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEndYear">End Year (Optional)</label>
+                        <input type="number" class="form-control" id="inputEndYear">
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="final_sub"><i class="fas fa-search"></i> Search</button>
+                    <button type="submit" class="btn btn-primary"><i class="fas fa-eraser"></i> Clear Results</button>
+                </form>
+            </div>
+        </div>
+        <div class="card result">
+            <div class="card-header">Top Articles</div>
+            <div class="card-body articles-display-here"></div>
+        </div>
+    </div>
+    <footer class="page-footer font-small">
+        <div class="footer-copyright text-center py-3">© 2019 Copyright</div>
+    </footer>
+    <script src="assets/script.js"></script>
+</body>
+</html>

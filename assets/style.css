@@ -1,0 +1,19 @@
+.jumbotron {
+    background-color: #21325a;
+    color: antiquewhite;
+    font-size: 40px;
+    font-weight: 700;
+}
+.footer-copyright {
+    background-color: #21325a;
+    color: antiquewhite;
+    margin-top: 35px;
+}
+.btn-primary {
+    background-color: white;
+    color: black;
+    border: none;
+}
+.btn-primary:hover {
+    background-color: #21325a;
+}
