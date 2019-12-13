@@ -5,18 +5,18 @@
 
 
 ## Table of contents
-*[Display](#Time_Display)
-* [API](#Hour_Divs)
-* [Website](#Website)
+* [Display](#Display)
+* [API](#API)
+* [Response](#Response)
 * [Credits](#Credits)
 
-## Website_Design
+## Design
 
 
-## Time_Display
+## API
 
 
-## Hour_Divs
+## Response
 
 
 ## Credits
