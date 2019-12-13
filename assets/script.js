@@ -1,7 +1,7 @@
+
 var search_term;
 var nNbr_records;
 var articles_info = [];
-
 
 
 // This is the function that has the functionality for making the api call
@@ -18,14 +18,16 @@ function success_function(response) {
         articles_info.push(record);
         console.log(vHeading)
 
-        // for reference to html
-        {/* <div class="card result">
-        <div class="card-header">Top Articles</div>
-        <div class="card-body articles-display-here"></div>
-        </div> */}
+        // creating variable to create a element on page 
         var articles = $('<div>').addClass("row")
 
+        // using same variable to fill the html of that element this is called a 'template literal'
+        // using the back tick " ` " button to enclose with *variable*.html
+        // using the for loop and the API call, I can dynamically create the articles
+
+        // I downloaded an extension called ES6 String HTML and typed /*html*/ to view it like html
         articles.html(/*html*/`
+        
                         <div class='mb-1'>
                             <h3 class='headers'> ${vHeading}</h1>
                             <p class='author'>${vAuthor}</p>
@@ -40,8 +42,6 @@ function success_function(response) {
                             `)
         $('.articles-display-here').prepend(articles)
     }
-    console.log(articles_info);
-
 
 }
 
@@ -54,15 +54,13 @@ function error_function() {
 
 var api_key = 'EpzgypA0SaNTLyQAWNx3SRRbFk6EocLC';
 
-// when there is a start and end year
-// var api_query ="https://api.nytimes.com/svc/search/v2/articlesearch.json?q="+search_term+"&begin_date="+start_year+"0101&end_date="+end_year+"1231&fl="+Nbr_records+"&sort=newest&api-key="+api_key;
-
 $("#final_sub").on("click", function () {
-    var articles_info = [];
+    
     $(".articles-display-here").empty();
+    
     // input search val
     var search_term = $('#inputSearch').val();
-    console.log(search_term);
+    
 
     // number records val
     var nNbr_records = $('#inputRecords').val();
@@ -77,15 +75,9 @@ $("#final_sub").on("click", function () {
         end_year = "2019"
     }
     console.log(end_year);
-    // start_year = 2000;
-    // end_year = 2019;
+
     var api_query = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + search_term + "&begin_date=" + start_year + "0101&end_date=" + end_year + "1231&sort=newest&api-key=" + api_key;
-    console.log(api_query);
+
     event.preventDefault();
     $.ajax({ url: api_query, success: success_function, error: error_function });
 });
-
-//////////////////////////////////////////////////////
-// html for reference
-
-
