@@ -21,7 +21,7 @@
 
 ## Credits
 This site was created in conjunction with:
-1. Marco Carrillo - 
+1. Marco Carrillo - github https://github.com/marco-carrillo
 2. Seohui Choe - github: https://github.com/schoe14
 
 Thanks for your hard work and excellent teamwork.
